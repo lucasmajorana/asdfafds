@@ -110,10 +110,23 @@ img{max-width:100%;display:block}
 .section__meta{opacity:.9;margin:.25rem 0 0}
 .note{opacity:.75}
 
-.release{
-  display:grid;gap:10px;background:var(--negro-grafito);
-  border:1px solid #222;border-radius:6px;padding:12px;margin-bottom:14px
+.release {
+  display: grid;
+  gap: 10px;
+  background: var(--negro-grafito);
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* <— animación suave */
 }
+
+.release:hover {
+  transform: scale(1.02); /* agranda levemente todo el recuadro */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* agrega profundidad */
+  z-index: 1; /* asegura que quede encima de otros elementos */
+}
+
 .release__media img{border:1px solid #222}
 .code{display:flex;gap:.4ch;align-items:baseline}
 .code span{font-weight:700;font-family:"Clash Grotesk",system-ui,sans-serif} /* enfatizar título con Clash */
@@ -161,10 +174,42 @@ img{max-width:100%;display:block}
   opacity: 1;
 }
 
-.reviews__list{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:10px}
-.review{background:#1A1A1A;border:1px solid #222;border-radius:6px;padding:12px}
-.review p{margin:.1rem 0}
-.review small{opacity:.75}
+/* Mobile-first: grilla ordenada */
+.comments-cloud{
+  position: relative;           /* mantiene el contexto */
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+/* En mobile, cada comentario ocupa su celda sin posiciones absolutas */
+.comment{
+  position: static;             /* sin posiciones fijas */
+  width: 100%;                  /* que llene su celda */
+  transform: none;              /* sin rotación por defecto */
+  transition: transform .25s ease, filter .25s ease;
+  cursor: default;
+}
+
+.comment:hover{
+  transform: scale(1.02);
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.4));
+  z-index: 1;
+}
+
+.c1  { top:  20px;  left:  40px;  transform: rotate(-6deg); }
+.c2  { top:  40px;  left: 330px;  transform: rotate(3deg);  }
+.c3  { top:  10px;  left: 660px;  transform: rotate(-4deg); }
+.c4  { top:  80px;  left: 920px;  transform: rotate(5deg);  }
+.c5  { top: 180px;  left: 120px;  transform: rotate(-2deg); }
+.c6  { top: 150px;  left: 480px;  transform: rotate(4deg);  }
+.c7  { top: 160px;  left: 780px;  transform: rotate(-5deg); }
+.c8  { top: 300px;  left:  60px;  transform: rotate(3deg);  }
+.c9  { top: 260px;  left: 360px;  transform: rotate(-3deg); }
+.c10 { top: 310px;  left: 660px;  transform: rotate(6deg);  }
+.c11 { top: 240px;  left: 950px;  transform: rotate(-4deg); }
 
 .statement blockquote{
   margin:0;background:#1A1A1A;border-left:4px solid var(--rojo-oxido);
@@ -206,4 +251,17 @@ img{max-width:100%;display:block}
   .gallery{grid-template-columns:repeat(4,1fr)}
   .hero__brand{left:32px;bottom:24px}
   .title{font-size:3.2rem}
+  .comments-cloud{
+    height: 520px;         
+    display: block;             
+    max-width: 1100px;
+  }
+  .comment{
+    position: absolute;      
+    width: 260px;
+    cursor: grab;
+  }
+  .comment:hover{
+    transform: scale(1.05) rotate(0deg);
+  }
 }
