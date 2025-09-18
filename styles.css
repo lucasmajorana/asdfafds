@@ -20,11 +20,10 @@ html,body{margin:0;padding:0;background:var(--negro-oxido);color:var(--blanco-hu
 body{
   font-family:"Clash Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height:1.55;
-  /* variable axis principal = peso; controlás variantes con font-weight */
 }
 
 h1,h2,h3,.title,.code,.cap{
-  font-family:"VT323", monospace; /* títulos y captions con VT323 */
+  font-family:"VT323", monospace;
   letter-spacing:.02em;
   margin:.25rem 0;
 }
@@ -35,7 +34,6 @@ h3{font-size:1.3rem}
 
 img{max-width:100%;display:block}
 
-/* ---------- HERO ---------- */
 .hero{position:relative;height:60vh;min-height:360px;overflow:hidden}
 .hero__video{width:100%;height:100%;object-fit:cover}
 .hero__overlay{
@@ -52,7 +50,6 @@ img{max-width:100%;display:block}
 .logo{width:56px;height:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
 .title{font-size:2.6rem}
 
-/* ---------- INTRO ---------- */
 .intro {
   background: #000;
   color: #fff;
@@ -72,7 +69,7 @@ img{max-width:100%;display:block}
 }
 
 .highlight {
-  color: #fff; /* podés poner aquí tu color acento */
+  color: #fff;
   font-weight: 600;
 }
 
@@ -99,12 +96,11 @@ img{max-width:100%;display:block}
 
 .credit {
   display: block;
-  font-family: 'VT323', monospace; /* fuente tipo máquina de escribir */
+  font-family: 'VT323', monospace;
   font-size: 2rem;
   opacity: 0.8;
 }
 
-/* ---------- SECTIONS ---------- */
 .section{padding:16px}
 .section__head{margin-bottom:10px}
 .section__title{
@@ -114,7 +110,6 @@ img{max-width:100%;display:block}
 .section__meta{opacity:.9;margin:.25rem 0 0}
 .note{opacity:.75}
 
-/* ---------- RELEASES ---------- */
 .release{
   display:grid;gap:10px;background:var(--negro-grafito);
   border:1px solid #222;border-radius:6px;padding:12px;margin-bottom:14px
@@ -128,7 +123,6 @@ img{max-width:100%;display:block}
 .tech li{padding:.15rem 0;border-top:1px dashed #2a2a2a}
 .tech li:first-child{border-top:none}
 
-/* ---------- CONÓCENOS ---------- */
 .gallery {
   list-style: none;
   padding: 0;
@@ -167,13 +161,11 @@ img{max-width:100%;display:block}
   opacity: 1;
 }
 
-/* ---------- REVIEWS ---------- */
 .reviews__list{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:10px}
 .review{background:#1A1A1A;border:1px solid #222;border-radius:6px;padding:12px}
 .review p{margin:.1rem 0}
 .review small{opacity:.75}
 
-/* ---------- STATEMENT ---------- */
 .statement blockquote{
   margin:0;background:#1A1A1A;border-left:4px solid var(--rojo-oxido);
   padding:12px 14px;border-radius:6px
@@ -185,7 +177,6 @@ img{max-width:100%;display:block}
   justify-content: center;
 }
 
-/* ---------- FOOTER ---------- */
 .site-footer{padding:28px 16px;border-top:1px solid #222;background:#0C0C0C}
 .footer__grid{
   display: flex;
@@ -202,8 +193,6 @@ img{max-width:100%;display:block}
 }
 .social a:hover{border-color:var(--rojo-oscuro);color:var(--rojo-oxido)}
 
-/* ---------- RESPONSIVE ---------- */
-/* Tablet */
 @media (min-width:768px){
   .hero{height:70vh}
   .section{padding:24px}
@@ -212,7 +201,6 @@ img{max-width:100%;display:block}
   h1{font-size:2.6rem} h2{font-size:2rem}
 }
 
-/* Desktop */
 @media (min-width:1024px){
   .release{grid-template-columns:300px 1fr}
   .gallery{grid-template-columns:repeat(4,1fr)}
