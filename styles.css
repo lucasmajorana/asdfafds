@@ -1,0 +1,121 @@
+:root{
+  --negro-oxido:#0D0D0D;
+  --negro-grafito:#1A1A1A;
+  --blanco-hueso:#F5F5F0;
+  --blanco-plomo:#E6E6E0;
+  --rojo-oscuro:#8C1A1A;
+  --rojo-oxido:#A62626;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--negro-oxido);color:var(--blanco-hueso)}
+
+body{
+  font-family:"Clash Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.55;
+  /* variable axis principal = peso; controlás variantes con font-weight */
+}
+
+h1,h2,h3,.title,.code,.cap{
+  font-family:"VT323", monospace; /* títulos y captions con VT323 */
+  letter-spacing:.02em;
+  margin:.25rem 0;
+}
+
+h1{font-size:2.2rem}
+h2{font-size:1.6rem}
+h3{font-size:1.3rem}
+
+img{max-width:100%;display:block}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;height:60vh;min-height:360px;overflow:hidden}
+.hero__video{width:100%;height:100%;object-fit:cover}
+.hero__overlay{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.65) 70%, rgba(0,0,0,.85) 100%),
+    url("img/texture.png");
+  background-size:cover;
+  mix-blend:multiply;
+  pointer-events:none;
+}
+.hero__brand{
+  position:absolute;left:16px;bottom:16px;display:flex;align-items:center;gap:10px
+}
+.logo{width:56px;height:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
+.title{font-size:2.6rem}
+
+/* ---------- INTRO ---------- */
+.intro{padding:16px;border-top:1px solid #222}
+.intro__text{font-weight:400}
+.intro .credit{opacity:.8}
+
+/* ---------- SECTIONS ---------- */
+.section{padding:16px}
+.section__head{margin-bottom:10px}
+.section__title{font-size:1.8rem}
+.section__meta{opacity:.9;margin:.25rem 0 0}
+.note{opacity:.75}
+
+/* ---------- RELEASES ---------- */
+.release{
+  display:grid;gap:10px;background:var(--negro-grafito);
+  border:1px solid #222;border-radius:6px;padding:12px;margin-bottom:14px
+}
+.release__media img{border:1px solid #222}
+.code{display:flex;gap:.4ch;align-items:baseline}
+.code span{font-weight:700;font-family:"Clash Grotesk",system-ui,sans-serif} /* enfatizar título con Clash */
+.date{opacity:.85;margin:.15rem 0 .35rem}
+.desc{margin:.2rem 0 .4rem}
+.tech{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.tech li{padding:.15rem 0;border-top:1px dashed #2a2a2a}
+.tech li:first-child{border-top:none}
+
+/* ---------- CONÓCENOS ---------- */
+.gallery{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.fig img{border:1px solid #222}
+.cap{font-size:1.05rem;margin-top:6px}
+
+/* ---------- REVIEWS ---------- */
+.reviews__list{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:10px}
+.review{background:#1A1A1A;border:1px solid #222;border-radius:6px;padding:12px}
+.review p{margin:.1rem 0}
+.review small{opacity:.75}
+
+/* ---------- STATEMENT ---------- */
+.statement blockquote{
+  margin:0;background:#1A1A1A;border-left:4px solid var(--rojo-oxido);
+  padding:12px 14px;border-radius:6px
+}
+.statement .by{opacity:.85;margin:.5rem 0 0}
+
+/* ---------- FOOTER ---------- */
+.site-footer{padding:28px 16px;border-top:1px solid #222;background:#0C0C0C}
+.footer__grid{display:grid;gap:16px}
+.logo--sm{width:42px}
+.footer__links h3,.footer__contact h3{font-size:1.1rem;margin:0 0 .25rem}
+.social{list-style:none;padding:0;margin:0;display:flex;gap:10px;flex-wrap:wrap}
+.social a{
+  padding:6px 10px;border:1px solid #2a2a2a;border-radius:999px;
+  font-weight:500; color:var(--blanco-plomo)
+}
+.social a:hover{border-color:var(--rojo-oscuro);color:var(--rojo-oxido)}
+
+/* ---------- RESPONSIVE ---------- */
+/* Tablet */
+@media (min-width:768px){
+  .hero{height:70vh}
+  .section{padding:24px}
+  .release{grid-template-columns:240px 1fr;gap:16px;padding:16px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  h1{font-size:2.6rem} h2{font-size:2rem}
+}
+
+/* Desktop */
+@media (min-width:1024px){
+  .release{grid-template-columns:300px 1fr}
+  .gallery{grid-template-columns:repeat(4,1fr)}
+  .hero__brand{left:32px;bottom:24px}
+  .title{font-size:3.2rem}
+}
