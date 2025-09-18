@@ -37,7 +37,6 @@ img{max-width:100%;display:block}
     linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.65) 70%, rgba(0,0,0,.85) 100%),
     url("img/texture.png");
   background-size:cover;
-  mix-blend:multiply;
   pointer-events:none;
 }
 .hero__brand{
@@ -47,14 +46,63 @@ img{max-width:100%;display:block}
 .title{font-size:2.6rem}
 
 /* ---------- INTRO ---------- */
-.intro{padding:16px;border-top:1px solid #222}
-.intro__text{font-weight:400}
-.intro .credit{opacity:.8}
+.intro {
+  background: #000;
+  color: #fff;
+  padding: 2rem;
+  font-family: 'Clash Grotesk', sans-serif;
+}
+
+.intro__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro__quote {
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #fff; /* podés poner aquí tu color acento */
+  font-weight: 600;
+}
+
+.intro__columns {
+  display: flex;
+  gap: 2rem;
+}
+
+.intro__left {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 2;
+  flex-shrink: 0;
+}
+
+.intro__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-size: 1.1rem;
+}
+
+.credit {
+  display: block;
+  font-family: 'VT323', monospace; /* fuente tipo máquina de escribir */
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
 
 /* ---------- SECTIONS ---------- */
 .section{padding:16px}
 .section__head{margin-bottom:10px}
-.section__title{font-size:1.8rem}
+.section__title{
+  font-size:5rem;
+  color: #8c1007;
+}
 .section__meta{opacity:.9;margin:.25rem 0 0}
 .note{opacity:.75}
 
