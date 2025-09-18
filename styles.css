@@ -252,9 +252,9 @@ img{max-width:100%;display:block}
   .hero__brand{left:32px;bottom:24px}
   .title{font-size:3.2rem}
   .comments-cloud{
-    height: 520px;         
-    display: block;             
-    max-width: 1100px;
+    height: 400px;
+    display: block;
+    max-width: 1300px;
   }
   .comment{
     position: absolute;      
