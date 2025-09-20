@@ -118,18 +118,18 @@ img{max-width:100%;display:block}
   border-radius: 6px;
   padding: 12px;
   margin-bottom: 14px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* <— animación suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .release:hover {
-  transform: scale(1.02); /* agranda levemente todo el recuadro */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* agrega profundidad */
-  z-index: 1; /* asegura que quede encima de otros elementos */
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .release__media img{border:1px solid #222}
 .code{display:flex;gap:.4ch;align-items:baseline}
-.code span{font-weight:700;font-family:"Clash Grotesk",system-ui,sans-serif} /* enfatizar título con Clash */
+.code span{font-weight:700;font-family:"Clash Grotesk",system-ui,sans-serif}
 .date{opacity:.85;margin:.15rem 0 .35rem}
 .desc{margin:.2rem 0 .4rem}
 .tech{list-style:none;padding:0;margin:0;display:grid;gap:2px}
@@ -176,7 +176,7 @@ img{max-width:100%;display:block}
 
 /* Mobile-first: grilla ordenada */
 .comments-cloud{
-  position: relative;           /* mantiene el contexto */
+  position: relative;
   width: 100%;
   margin: 0 auto;
   display: grid;
@@ -186,9 +186,9 @@ img{max-width:100%;display:block}
 
 /* En mobile, cada comentario ocupa su celda sin posiciones absolutas */
 .comment{
-  position: static;             /* sin posiciones fijas */
-  width: 100%;                  /* que llene su celda */
-  transform: none;              /* sin rotación por defecto */
+  position: static;
+  width: 100%;
+  transform: none;
   transition: transform .25s ease, filter .25s ease;
   cursor: default;
 }
@@ -227,8 +227,8 @@ img{max-width:100%;display:block}
   align-items: center;
   gap: 10px;
   margin-top: .5rem;
-  flex-wrap: wrap;   /* permite saltar de línea en mobile */
-  width: 100%;       /* necesario para que el auto empuje hasta el borde */
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 /* empuja el botón hacia la derecha */
